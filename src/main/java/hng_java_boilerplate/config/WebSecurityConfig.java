@@ -90,7 +90,7 @@ public class WebSecurityConfig {
                                         "/api/v1/squeeze/",
                                         "/api/v1/comments/delete/{commentId}"
                                 ).permitAll()
-                                .requestMatchers("/api/v1/auth/logout", "/api/**").authenticated())
+                                .requestMatchers("/api/v1/auth/logout", "/api/**").authenticated().anyRequest().permitAll())
                 .logout(logout -> logout
                         .deleteCookies("remove")
                         .invalidateHttpSession(true)
