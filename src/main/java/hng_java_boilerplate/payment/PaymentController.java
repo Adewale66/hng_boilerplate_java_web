@@ -28,7 +28,7 @@ public class PaymentController {
     public String test(@RequestBody RequestDTO requestDTO) throws StripeException {
         System.out.println(BigDecimal.valueOf(19.99));
         BigDecimal t = BigDecimal.ONE;
-        Stripe.apiKey = "sk_test_51PmcZkP5BIJwwIPn3vi9Y26hUyJVYnClJEqmmCQOc8lw2Kj01xthLwEdHRGBZUqlSPlLAGU7G51Vd8AEPbtAgV1R00ixN3DlHS";
+        Stripe.apiKey = "";
         Product product = new Product();
         Price price = new Price();
         price.setCurrency("usd");
